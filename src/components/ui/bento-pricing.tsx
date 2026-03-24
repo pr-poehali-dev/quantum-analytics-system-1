@@ -91,33 +91,28 @@ export function BentoPricing() {
         </div>
         <div className="flex items-center gap-3 p-3">
           <Badge variant="secondary" className="bg-white/10 text-white border-white/20 font-open-sans-custom text-xs">
-            ПРЕМИУМ
+            ГЛАВНЫЙ ФАКТ
           </Badge>
           <Badge
             variant="outline"
             className="hidden lg:flex bg-white/5 text-white border-white/20 font-open-sans-custom text-xs"
           >
-            <SparklesIcon className="me-1 size-3" /> Популярный
+            <SparklesIcon className="me-1 size-3" /> Ключевой
           </Badge>
-          <div className="ml-auto">
-            <Button size="sm" className="bg-white text-black hover:bg-gray-100 font-open-sans-custom text-xs">
-              Подписаться
-            </Button>
-          </div>
         </div>
         <div className="flex flex-col p-3 lg:flex-row">
           <div className="pb-2 lg:w-[30%]">
             <span className="font-mono text-3xl font-semibold tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)]">
-              2 000 ₽
+              95%
             </span>
-            <span className="text-gray-300 text-xs font-open-sans-custom">/мес</span>
+            <span className="text-gray-300 text-xs font-open-sans-custom"> подростков</span>
           </div>
           <ul className="text-gray-300 grid gap-2 text-xs lg:w-[70%] font-open-sans-custom">
             {[
-              "2 000 ₽ кредитов включено ежемесячно",
-              "Докупайте кредиты сверх месячного лимита",
-              "5x увеличенный лимит вложений",
-              "Импорт дизайнов из популярных инструментов",
+              "имеют аккаунт хотя бы в одной соцсети",
+              "проводят в соцсетях более 3 часов в день",
+              "сталкивались с негативным контентом онлайн",
+              "признают, что соцсети влияют на их настроение",
             ].map((f, i) => (
               <li key={i} className="flex items-center gap-2">
                 <Check className="w-[1.05rem] h-[1.05rem] text-white flex-shrink-0" strokeWidth={3} />
@@ -129,50 +124,51 @@ export function BentoPricing() {
       </div>
 
       <PricingCard
-        titleBadge="СТАРТ"
-        priceLabel="0 ₽"
+        titleBadge="ВРЕМЯ В СЕТИ"
+        priceLabel="7+ часов"
+        priceSuffix="/день"
         features={[
-          "500 ₽ кредитов включено ежемесячно",
-          "Деплой приложений в облако",
-          "Визуальное редактирование",
-          "Синхронизация с Git",
+          "Среднее время в соцсетях у подростков 13–17 лет",
+          "TikTok и YouTube занимают наибольшую долю",
+          "Превышает рекомендованные 2 часа экранного времени",
+          "Ночное использование нарушает сон у 60% подростков",
         ]}
         className="lg:col-span-3"
-        cta="Начать"
+        cta="Подробнее"
       />
 
       <PricingCard
-        titleBadge="КОМАНДА"
-        priceLabel="3 000 ₽"
-        priceSuffix="/чел/мес"
-        features={[
-          "3 000 ₽ кредитов на участника ежемесячно",
-          "Единый биллинг и управление командой",
-          "Общие чаты и совместная работа",
-        ]}
-        className="lg:col-span-4"
-      />
-
-      <PricingCard
-        titleBadge="БИЗНЕС"
-        priceLabel="10 000 ₽"
-        priceSuffix="/чел/мес"
-        features={["3 000 ₽ кредитов на участника ежемесячно", "Отключение обучения по умолчанию", "Полный доступ к API"]}
-        className="lg:col-span-4"
-      />
-
-      <PricingCard
-        titleBadge="КОРПОРАЦИЯ"
-        priceLabel="По запросу"
+        titleBadge="КИБЕРБУЛЛИНГ"
+        priceLabel="каждый 3-й"
         priceSuffix=""
         features={[
-          "Отключение обучения по умолчанию",
-          "SAML SSO",
-          "Приоритетный доступ",
-          "Персональная поддержка",
+          "Каждый третий подросток сталкивался с травлей онлайн",
+          "Жертвы в 2 раза чаще страдают депрессией",
+          "70% свидетелей не вмешиваются",
+        ]}
+        className="lg:col-span-4"
+      />
+
+      <PricingCard
+        titleBadge="САМООЦЕНКА"
+        priceLabel="−40%"
+        priceSuffix=""
+        features={["Снижение самооценки у девочек после просмотра «идеальных» фото", "Рост тревожности и FOMO-синдрома", "Сравнение себя с блогерами — главный триггер"]}
+        className="lg:col-span-4"
+      />
+
+      <PricingCard
+        titleBadge="ВЫВОД ПРОЕКТА"
+        priceLabel="Осознанность"
+        priceSuffix=""
+        features={[
+          "Цифровая грамотность снижает негативные эффекты",
+          "Родительский контроль эффективен до 14 лет",
+          "Перерывы от соцсетей улучшают самочувствие",
+          "Позитивные сообщества оказывают поддерживающий эффект",
         ]}
         className="lg:col-span-8"
-        cta="Связаться"
+        cta="Читать полностью"
       />
     </div>
   )
